@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
-  # spec.executables << 'telegraphia'
 
   spec.add_dependency 'activesupport', '~> 7.0', '>= 7.0.3'
   spec.add_dependency 'thor', '~> 1.2', '>= 1.2.1'
