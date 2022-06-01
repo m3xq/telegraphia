@@ -9,9 +9,8 @@ module Telegraphia
         end
 
         def self.subcommand_prefix
-          name.gsub(/.*::/, '').gsub(/^[A-Z]/) do |match|
-            match[0].downcase
-          end.gsub(/[A-Z]/) { |match| "-#{match[0].downcase}" }
+          prefix = name.gsub(/.*::/, '').gsub(/^[A-Z]/) { |match| match[0].downcase }
+          prefix.gsub(/[A-Z]/) { |match| "-#{match[0].downcase}" }
         end
       end
     end
